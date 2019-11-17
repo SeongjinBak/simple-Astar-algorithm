@@ -8,6 +8,8 @@ Unity 엔진( Unity 2018.3.0f2 (64-bit) ) 으로 구현한 A* 알고리즘 프로젝트 파일 입
 
 youtube 링크 : https://youtu.be/eHvMHx2CLUQ
 
+참고 동영상 : https://www.youtube.com/watch?v=-L-WgKMFuhE
+
 스크립트 개요
 --
 	1. Node.cs : 격자의 Cell 입니다.
@@ -18,17 +20,17 @@ youtube 링크 : https://youtu.be/eHvMHx2CLUQ
 적용 방법
 --
 	1. Player 게임오브젝트를 생성합니다.
-![player](./Images/player.png)
+![player](./Images/player.PNG)
 
 	2. Astar - Path Finding의 Seeker에 Player를, Grid에 Unwalkable 레이어를 설정합니다.
- ![astar](./Images/astar.png)
+ ![astar](./Images/astar.PNG)
 
 	3. Obstacle의 layer를 Unwalkable로 지정 후 BoxCollider를 추가합니다.
- ![obstacle](./Images/obstacle.png)
+ ![obstacle](./Images/obstacle.PNG)
  
  	4. Target에 Target.cs를 부착합니다. 
- ![target](./Images/target.png)
+ ![target](./Images/target.PNG)
  
  	5. Target Game Object의 위치에 따라 A*의 Target이 설정됩니다. Scene View에서 Target의 위치를 변화시켜서 확인할 수 있습니다.
- ![play](./Images/play.png)
+ ![play](./Images/play.PNG)
  
