@@ -2,10 +2,20 @@
  * A* 알고리즘 커스텀 클래스 입니다.
  * 이 알고리즘은, 터치로 입력받은 장애물을 피해 target위치로 플레이어(seeker)를 가장 최적의 루트로 이동시키는 스크립트 입니다.
  * 
- * 이 클래스는 화면을 grids로 나누어야 합니다. 이를 위해 커스텀클래스 Grid와 Node를 사용합니다.
+ * 이 클래스는 화면을 grids로 나누어야 합니다. 이를 위해 커스텀클래스 Grid와 Node class를 사용합니다.
  * 
  * 사용시, Astar prefab을 Hierarchy view에 옮긴 후 position을 0,0,0으로 설정, 그리고
  * seeker에 Player를 등록하면 됩니다.
+ * 
+ * 알고리즘 개요
+ * OPEN SET : 평가되어야 할 노드 집합
+ * CLOSED SET : 이미 평가된 노드 집합
+ * 
+ * 1. OPEN SET에서 가장 낮은 F코스트를 가진 노드 획득 후 CLOSED SET 삽입
+ * 2. 이 노드가 목적지라면, 반복문 탈출
+ * 3. 이 노드의 주변 노드들을 CLOSED SET에 넣고, 주변노드의 F값 계산. 주변노드의 G값보다 작다면 F값으로 G값 최신화
+ * 4. 1번 반복.
+ * 
  */ 
 
 
@@ -127,7 +137,7 @@ public class PathFinding : MonoBehaviour
         bool pathSuccess = false;
 
         if (!startNode.walkable)
-            Debug.LogError("Unwalkable StartNode 입니다.");
+            Debug.Log("Unwalkable StartNode 입니다.");
 
         // walkable한 targetNode인 경우 길찾기 시작.
         if(targetNode.walkable)

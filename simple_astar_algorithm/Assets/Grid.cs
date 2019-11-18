@@ -50,11 +50,16 @@ public class Grid : MonoBehaviour
             {
                 Gizmos.color = (n.walkable) ? Color.white : Color.red;
                 if(n.walkable == false)
-                Debug.Log(n.walkable);
+                
                 if(path != null)
                 {
-                    if (path.Contains(n)) Gizmos.color = Color.black;
-                }
+                    if (path.Contains(n))
+                        {
+                            Gizmos.color = Color.black;
+                            Debug.Log("?");
+
+                        }
+                    }
                 if (playerNode == n) Gizmos.color = Color.cyan;
                 Gizmos.DrawCube(n.worldPosition, Vector2.one * (nodeDiameter - 0.1f));
             }
