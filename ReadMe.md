@@ -4,6 +4,8 @@ Unity 엔진( Unity 2018.3.0f2 (64-bit) ) 으로 구현한 A* 알고리즘 프로젝트 파일 입
 
 이 기술은 모바일 게임 "수몰지구"의 길찾기 알고리즘에 사용되었습니다.
 
+PathFinding.cs : https://github.com/SeongjinBak/simple-Astar-algorithm/blob/master/simple_astar_algorithm/Assets/PathFinding.cs
+
 수몰지구 다운로드 링크 : https://play.google.com/store/apps/details?id=com.EXP.EXP_SooMolJiGoo&hl=ko
 
 youtube 링크 : https://youtu.be/eHvMHx2CLUQ
